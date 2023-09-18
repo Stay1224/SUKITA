@@ -9,8 +9,8 @@ function Header() {
             <li><a href="#">Sobre</a></li>
             <li><a href="#">Contato</a></li>
             <li><a href="#">Quem somos nós?</a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#">Ajuda</a></li>
+            <li><a href="#">Resumo</a></li>
         </ul>
         </nav>
         <div>
