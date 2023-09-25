@@ -1,5 +1,8 @@
 /* Header.module.css */
 
+/* Header.module.css */
+
+/* Estilos para telas maiores (desktop) */
 .header {
   background: #04425a;
   color: #fff;
@@ -7,16 +10,52 @@
   background: brightness(0.7);
 }
 
-.header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* Estilos para telas menores (dispositivos móveis) */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.5rem; /* Reduza o preenchimento no topo e na parte inferior */
+  }
+
+  /* Alinhe o logo e o texto centralmente */
+  .header div {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .header h1 {
+    font-size: 24px; /* Reduza o tamanho da fonte do título */
+    margin-bottom: 5px; /* Reduza a margem inferior */
+  }
+
+  .header p {
+    font-size: 14px; /* Reduza o tamanho da fonte do texto de descrição */
+  }
+
+  /* Estilos para a navegação em dispositivos móveis */
+  .header nav ul {
+    display: none; /* Oculte a lista de navegação */
+  }
+
+  .header .menu-icon {
+    display: block; /* Exiba o ícone do menu */
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .header .menu-active nav ul {
+    display: block; /* Exiba a lista de navegação quando o menu está ativo */
+  }
+
+  .header .menu-active .menu-icon {
+    display: none; /* Oculte o ícone do menu quando o menu está ativo */
+  }
+
+  .header nav ul li {
+    text-align: center; /* Centralize os itens da lista */
+    margin: 10px 0;
+  }
 }
 
-.header nav ul li {
-  display: inline-block;
-  margin-right: 1rem;
-}
 
 .header nav ul li a {
   color: #fff;

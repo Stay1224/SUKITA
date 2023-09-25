@@ -1,65 +1,50 @@
 /* Home.module.css */
 
-.home {
-  font-family: 'Arial', sans-serif;
+/* Home.module.css */
+
+/* Adicione um media query para dispositivos móveis */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0; /* Reduza o preenchimento no topo e na parte inferior */
+  }
+
+  .hero h1 {
+    font-size: 36px; /* Reduza o tamanho da fonte do título */
+  }
+
+  .hero p {
+    font-size: 18px; /* Reduza o tamanho da fonte do texto de descrição */
+    margin-bottom: 20px; /* Reduza a margem inferior */
+  }
+
+  .ctaButton {
+    padding: 8px 16px; /* Reduza o tamanho do botão */
+    font-size: 16px; /* Reduza o tamanho da fonte do botão */
+  }
+
+  /* Adicione estilos para a seção de recursos */
+  .features {
+    flex-direction: column; /* Empilhe os recursos verticalmente */
+    padding: 20px 0; /* Reduza o preenchimento entre os recursos */
+  }
+
+  .feature h2 {
+    font-size: 24px; /* Reduza o tamanho da fonte dos títulos dos recursos */
+    margin: 10px 0; /* Reduza a margem superior e inferior dos títulos dos recursos */
+  }
+
+  .feature p {
+    font-size: 16px; /* Reduza o tamanho da fonte do texto dos recursos */
+  }
+
+  .featureImage {
+    max-width: 100%; /* Redimensione as imagens dos recursos para caber na tela */
+    height: auto;
+  }
 }
 
-.hero {
-  background-color: #04425a;
-  color: #fff;
-  padding: 100px 0;
-  text-align: center;
-}
+/* Adicione mais regras de mídia e estilos conforme necessário para outros tamanhos de tela */
 
-.hero h1 {
-  font-size: 48px;
-  margin: 20px 0;
-}
-
-.hero p {
-  font-size: 24px;
-  margin-bottom: 40px;
-}
-
-.ctaButton {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #fff;
-  color: #043544;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 25px;
-  transition: background-color 0.3s ease;
-}
-
-.ctaButton:hover {
-  background-color: #0A2430;
-  color: #fff;
-}
-
-.features {
-  display: flex;
-  justify-content: space-around;
-  padding: 40px 0;
-}
-
-.feature {
-  text-align: center;
-}
-
-.feature h2 {
-  font-size: 24px;
-  margin: 20px 0;
-}
-
-.feature p {
-  font-size: 16px;
-}
-
-.featureImage {
-  max-width: 100%;
-  height: auto;
-}
 
 .learnMore {
   background-color: #0A2430;
