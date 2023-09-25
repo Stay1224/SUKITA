@@ -1,0 +1,124 @@
+/* Footer.module.css */
+
+.footer {
+    background-color: #0A2430;
+    color: #fff;
+    padding: 2rem 0;
+  }
+  
+  .footerContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 8px;
+  }
+  
+  ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  ul li a:hover {
+    color: #064404;
+  }
+  
+  .socialLinks {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .socialLinks li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .socialLinks i {
+    margin-right: 8px;
+  }
+  
+  .newsletterForm {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .newsletterForm input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  
+  .newsletterForm button {
+    background-color: #064404;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .newsletterForm button:hover {
+    background-color: #0A2430;
+  }
+  
+  .searchBar {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .searchBar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .searchBar form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .searchBar input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 20px 0 0 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  
+  .searchBar button {
+    background-color: #064404;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .searchBar button:hover {
+    background-color: #0A2430;
+  }
+  

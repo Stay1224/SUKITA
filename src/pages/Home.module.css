@@ -1,71 +1,124 @@
-.textSlider {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Ajuste a altura conforme necessário */
-    overflow: hidden;
-  }
-  
-  .backgroundImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://th.bing.com/th/id/OIP.PgEe7E-J9KDnx0pBGmrSNwHaEK?pid=ImgDet&rs=1'); /* Substitua 'sua-imagem-de-fundo.jpg' 
-    pelo caminho da sua imagem de fundo */
-    filter: brightness(0.7); /* Ajuste o brilho da imagem de fundo conforme necessário */
-    z-index: -1;
-  }
-  
-  .textContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  .text {
-    font-size: 36px; /* Tamanho da fonte do texto */
-    color: #ffffff; /* Cor azulada */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para o texto */
-    animation: fadeInOut 3s ease-in-out infinite; /* Animação de fade in/out */
-  
-    @keyframes fadeInOut {
-      0%, 100% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-    }
-  }
-  /* ... (estilos existentes) */
+/* Home.module.css */
 
-.arrowButton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    font-size: 120px;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    z-index: 2;
-    transition: color 0.3s ease;
-  }
-  
-  .arrowButton:hover {
-    color: #064404; /* Mude para a cor desejada ao passar o mouse */
-  }
-  
-  .previous {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
-  /* ... (estilos existentes) */
-  
+.home {
+  font-family: 'Arial', sans-serif;
+}
+
+.hero {
+  background-color: #04425a;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #043544;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #0A2430;
+  color: #fff;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature h2 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.feature p {
+  font-size: 16px;
+}
+
+.featureImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.learnMore {
+  background-color: #0A2430;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.learnMore h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.learnMore p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.imageSlider {
+  background-color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.slideContainer {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.slide {
+  display: none;
+}
+
+.activeSlide {
+  display: block;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+.slideIndicators {
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.activeIndicator {
+  background-color: #064404;
+}
+
+/* Adicione mais estilos e personalize conforme necessário */
