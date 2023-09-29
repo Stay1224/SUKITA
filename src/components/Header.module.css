@@ -1,71 +1,173 @@
 /* Header.module.css */
 
-/* Header.module.css */
-
 /* Estilos para telas maiores (desktop) */
 .header {
   background: #04425a;
   color: #fff;
-  padding: 1rem;
-  background: brightness(0.7);
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.header a:hover {
+  color: #ffd700;
+}
+
+.header .logo {
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffd700;
+}
+
+.header .logo:hover {
+  color: #fff;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.searchInput {
+  border: none;
+  padding: 8px;
+  width: 200px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+}
+
+.searchButton {
+  background-color: #ffd700;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.searchButton:hover {
+  background-color: #f9c900;
+}
+
+.menuIcon {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.menuIcon:hover {
+  color: #ffd700;
+}
+
+.menuIcon .menuBar {
+  height: 2px;
+  width: 25px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: background-color 0.3s;
+}
+
+.menuIcon.menuActive .menuBar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.menuIcon.menuActive .menuBar:nth-child(2) {
+  opacity: 0;
+}
+
+.menuIcon.menuActive .menuBar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -5px);
 }
 
 /* Estilos para telas menores (dispositivos móveis) */
 @media (max-width: 768px) {
   .header {
-    padding: 0.5rem; /* Reduza o preenchimento no topo e na parte inferior */
+    padding: 0.5rem;
   }
 
-  /* Alinhe o logo e o texto centralmente */
-  .header div {
-    text-align: center;
-    margin-top: 10px;
+  .header a {
+    font-size: 14px;
+    margin: 0 10px;
   }
 
-  .header h1 {
-    font-size: 24px; /* Reduza o tamanho da fonte do título */
-    margin-bottom: 5px; /* Reduza a margem inferior */
+  .header .logo {
+    font-size: 16px;
   }
 
-  .header p {
-    font-size: 14px; /* Reduza o tamanho da fonte do texto de descrição */
+  .searchInput {
+    width: 150px;
   }
 
-  /* Estilos para a navegação em dispositivos móveis */
-  .header nav ul {
-    display: none; /* Oculte a lista de navegação */
+  .menuIcon {
+    display: flex;
   }
 
-  .header .menu-icon {
-    display: block; /* Exiba o ícone do menu */
-    font-size: 24px;
-    cursor: pointer;
+  .menuIcon.menuActive .menuBar {
+    background-color: #ffd700;
   }
 
-  .header .menu-active nav ul {
-    display: block; /* Exiba a lista de navegação quando o menu está ativo */
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #04425a;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 0 0 4px 4px;
+    z-index: 2;
   }
 
-  .header .menu-active .menu-icon {
-    display: none; /* Oculte o ícone do menu quando o menu está ativo */
+  .navLinks.menuOpen {
+    display: flex;
   }
 
-  .header nav ul li {
-    text-align: center; /* Centralize os itens da lista */
+  .navLinks ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .navLinks li {
     margin: 10px 0;
+    text-align: center;
   }
-}
 
+  .navLinks a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
 
-.header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.header nav ul li a:hover {
-  color: rgba(0, 0, 0, 0.384);
-  transition: 0.4s;
-  text-decoration: none;
-  background: rgba(236, 234, 234, 0.614);
-  padding: 0.3rem;
+  .navLinks a:hover {
+    color: #ffd700;
+  }
 }

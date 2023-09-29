@@ -46,16 +46,23 @@
   
   .socialLinks {
     display: flex;
-    flex-direction: column;
+    padding: 0.5rem;
+    
   }
   
   .socialLinks li {
     display: flex;
     align-items: center;
+    padding: 0.5rem;
   }
   
   .socialLinks i {
     margin-right: 8px;
+    
+  }
+  .socialLinks a:hover {
+  background: floralwhite;
+    
   }
   
   .newsletterForm {
@@ -107,6 +114,10 @@
     border-radius: 20px 0 0 20px;
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
+  }
+  .socialIcon{
+    max-width: 3rem;
+  
   }
   
   .searchBar button {

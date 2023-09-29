@@ -1,5 +1,9 @@
 import React from 'react';
 import styles from './Footer.module.css';
+import facebook  from '../Imagens/facebook.png';
+import logo  from '../Imagens/logo.png';
+import twitter  from '../Imagens/twitter.png';
+import linkedin  from '../Imagens/linkedin.png';
 
 const Footer = () => {
   return (
@@ -19,16 +23,16 @@ const Footer = () => {
           <h2>Redes Sociais</h2>
           <ul className={styles.socialLinks}>
             <li>
-              <a href="#"><img src="facebook.svg" alt="Facebook" className={styles.socialIcon} /></a>
+              <a href="#"><img src={facebook} alt="Facebook" className={styles.socialIcon} /></a>
             </li>
             <li>
-              <a href="#"><img src="twitter.svg" alt="Twitter" className={styles.socialIcon} /></a>
+              <a href="#"><img src={logo} alt="Instagram" className={styles.socialIcon} /></a>
             </li>
             <li>
-              <a href="#"><img src="instagram.svg" alt="Instagram" className={styles.socialIcon} /></a>
+              <a href="#"><img src={twitter} alt="Twitter" className={styles.socialIcon} /></a>
             </li>
             <li>
-              <a href="#"><img src="linkedin.svg" alt="LinkedIn" className={styles.socialIcon} /></a>
+              <a href="#"><img src={linkedin} alt="LinkedIn" className={styles.socialIcon} /></a>
             </li>
           </ul>
         </div>

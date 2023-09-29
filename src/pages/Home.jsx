@@ -1,15 +1,17 @@
+// Home.jsx
 import React, { useState, useEffect } from 'react';
 import styles from './Home.module.css';
-
+import suporte from '../Imagens/suporte.png'
+import recursos from '../Imagens/recursos.png'
+import facil2 from '../Imagens/facil2.png'
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    'https://example.com/slide1.jpg', // Substitua com o URL da sua imagem
-    'https://example.com/slide2.jpg', // Substitua com o URL da sua imagem
-    'https://example.com/slide3.jpg', // Substitua com o URL da sua imagem
+    'https://th.bing.com/th/id/R.8b2c811c15dda675e8dc3309ef77e51c?rik=Hm5260u1%2f6jgcw&riu=http%3a%2f%2fwww.lingzhilab.com%2flzbbs%2farduino%2fimg%2fArduino-UNO-R3%2fArduino-UNO-R3-img1.jpg&ehk=Ad42L25A9AyVZO3aweZy47vHaldweR2r%2bI3Arp5Vrlo%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1', // Substitua com o URL da sua imagem
+    'https://www.iottechtrends.com/assets/uploads/2019/04/Arduino-Uno-Components.jpg', // Substitua com o URL da sua imagem
+    'https://th.bing.com/th/id/OIP._LUXY3wulbRU7sLP7UfV9QHaHa?pid=ImgDet&rs=1', // Substitua com o URL da sua imagem
   ];
 
-  // Função para avançar o slide automaticamente
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
@@ -31,17 +33,19 @@ const Home = () => {
       <section className={styles.features}>
         <div className={styles.feature}>
           <img
-            src="https://th.bing.com/th/id/R.40e843bbc42e8ce413714d6af1bd44d9?rik=Y9yY9WLCpjvCRw&riu=http%3a%2f%2fwww.webquestcreator2.com%2fmajwq%2ffiles%2ffiles_user%2f36550%2frecursos.jpg&ehk=KVRl5utl5fGAPvuUMdEP5Ilh53jNrEF%2bsnDoMGn%2f%2blY%3d&risl=&pid=ImgRaw&r=0" // Substitua com o URL da sua imagem
+            src={recursos}
             alt="Feature 1"
             className={styles.featureImage}
           />
           <h2>Recursos Avançados</h2>
-          <p>Oferecemos uma variedade de recursos avançados para atender às suas necessidades.</p>
+          <p>Oferecemos uma variedade de recursos avançados para atender às suas necessidades.
+         
+          </p>
         </div>
         <div className={styles.feature}>
           <img
-            src="https://www.svgrepo.com/show/513856/support.svg" // Substitua com o URL da sua imagem
-            alt="Feature 2"
+            src={suporte}
+            alt="feature 2"
             className={styles.featureImage}
           />
           <h2>Suporte 24/7</h2>
@@ -49,7 +53,7 @@ const Home = () => {
         </div>
         <div className={styles.feature}>
           <img
-            src="https://example.com/feature-3.jpg" // Substitua com o URL da sua imagem
+            src={facil2}
             alt="Feature 3"
             className={styles.featureImage}
           />
@@ -71,7 +75,7 @@ const Home = () => {
               key={index}
               className={`${styles.slide} ${index === currentSlide ? styles.activeSlide : ''}`}
             >
-              <img src={slide} alt={`Slide ${index + 1}`} />
+              <img src={slide} alt={`Slide ${index + 1}`} className={styles.slideImage} />
             </div>
           ))}
         </div>

@@ -1,11 +1,17 @@
 /* Home.module.css */
 
 /* Home.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Rubik:wght@600&family=Signika+Negative:wght@500;700&display=swap');
 
+*{
+  font-family: 'Signika Negative', sans-serif;
+}
 /* Adicione um media query para dispositivos móveis */
 @media (max-width: 768px) {
   .hero {
     padding: 60px 0; /* Reduza o preenchimento no topo e na parte inferior */
+    display: flex;
+   
   }
 
   .hero h1 {
@@ -15,6 +21,7 @@
   .hero p {
     font-size: 18px; /* Reduza o tamanho da fonte do texto de descrição */
     margin-bottom: 20px; /* Reduza a margem inferior */
+  
   }
 
   .ctaButton {
@@ -25,6 +32,7 @@
   /* Adicione estilos para a seção de recursos */
   .features {
     flex-direction: column; /* Empilhe os recursos verticalmente */
+    display: flex;
     padding: 20px 0; /* Reduza o preenchimento entre os recursos */
   }
 
@@ -44,7 +52,49 @@
 }
 
 /* Adicione mais regras de mídia e estilos conforme necessário para outros tamanhos de tela */
+.hero{
+  background: #001e24;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+
+
+  padding: 0.5rem;
+  height: 80vh;
+  text-align: center;
+  
+}
+.hero a{
+  text-decoration: none;
+  color: rgb(1, 41, 41);
+  background-color: #ffffff;
+  border-radius: 3rem;
+  padding: 0.4rem;
+  
+  
+}
+
+.hero p{
+  margin-bottom: 0.5rem;
+}
+.features{
+  color:#001e24;
+  padding: 3rem;
+  display: flex;
+
+
+}
+.feature img:hover{
+  background: #0333619d;
+  
+}
+.feature img{
+  height: 15rem;
+  width: 18rem;
+  padding: 0.5rem;
+}
 
 .learnMore {
   background-color: #0A2430;
@@ -64,14 +114,17 @@
 }
 
 .imageSlider {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 80px 0;
   text-align: center;
+block-size: auto;
+ height:initial;
 }
 
 .slideContainer {
   position: relative;
   max-width: 1200px;
+  min-width: 1200px;
   margin: 0 auto;
 }
 
@@ -105,5 +158,8 @@
 .activeIndicator {
   background-color: #064404;
 }
-
+.ctaButton:hover{
+background: #0A2430;
+color: #ccc;
+}
 /* Adicione mais estilos e personalize conforme necessário */
