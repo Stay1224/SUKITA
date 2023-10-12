@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Footer.module.css';
 import facebook  from '../Imagens/facebook.png';
 import logo  from '../Imagens/logo.png';
-import twitter  from '../Imagens/twitter.png';
+import twitter  from '../Imagens/twitter.svg';
 import linkedin  from '../Imagens/linkedin.png';
 
 const Footer = () => {
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.section}>
-          <h2>Newsletter</h2>
+          <h2>Contate-nos</h2>
           <p>Inscreva-se para receber nossas atualizações.</p>
           <form className={styles.newsletterForm}>
             <input type="email" placeholder="Seu Email" />

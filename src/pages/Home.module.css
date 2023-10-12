@@ -1,17 +1,20 @@
 /* Home.module.css */
 
-/* Home.module.css */
+/* Importar fontes */
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Rubik:wght@600&family=Signika+Negative:wght@500;700&display=swap');
 
-*{
+/* Estilos globais */
+* {
   font-family: 'Signika Negative', sans-serif;
 }
-/* Adicione um media query para dispositivos móveis */
+
+/* Estilos para telas menores, como dispositivos móveis */
 @media (max-width: 768px) {
+  /* Seção Hero */
   .hero {
     padding: 60px 0; /* Reduza o preenchimento no topo e na parte inferior */
     display: flex;
-   
+    text-align: center;
   }
 
   .hero h1 {
@@ -21,7 +24,6 @@
   .hero p {
     font-size: 18px; /* Reduza o tamanho da fonte do texto de descrição */
     margin-bottom: 20px; /* Reduza a margem inferior */
-  
   }
 
   .ctaButton {
@@ -29,7 +31,7 @@
     font-size: 16px; /* Reduza o tamanho da fonte do botão */
   }
 
-  /* Adicione estilos para a seção de recursos */
+  /* Seção de Recursos */
   .features {
     flex-direction: column; /* Empilhe os recursos verticalmente */
     display: flex;
@@ -45,62 +47,73 @@
     font-size: 16px; /* Reduza o tamanho da fonte do texto dos recursos */
   }
 
-  .featureImage {
-    max-width: 100%; /* Redimensione as imagens dos recursos para caber na tela */
-    height: auto;
-  }
+  /* Outros estilos responsivos */
+  /* ... Adicione mais estilos conforme necessário para dispositivos móveis ... */
 }
 
-/* Adicione mais regras de mídia e estilos conforme necessário para outros tamanhos de tela */
-.hero{
-  background: #001e24;
+/* Estilos para telas maiores */
+/* ... Adicione estilos padrão para telas maiores aqui ... */
+
+/* Estilos não relacionados à responsividade */
+/* ... Adicione outros estilos não relacionados à responsividade aqui ... */
+
+/* Restante do seu CSS não relacionado à responsividade deve estar aqui */
+
+/* Estilos do componente que você compartilhou */
+.hero {
+  background: #3dee8c;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-
-
-
   padding: 0.5rem;
   height: 80vh;
   text-align: center;
-  
 }
-.hero a{
+
+.hero a {
   text-decoration: none;
   color: rgb(1, 41, 41);
   background-color: #ffffff;
   border-radius: 3rem;
   padding: 0.4rem;
-  
-  
 }
 
-.hero p{
+.hero p {
   margin-bottom: 0.5rem;
 }
-.features{
-  color:#001e24;
+
+.features {
+  color: #001e24;
   padding: 3rem;
   display: flex;
-
-
 }
-.feature img:hover{
-  background: #0333619d;
-  
+
+.feature img:hover {
+  background: #3dee8c;
+  transition-duration: 0.3s;
+  cursor: pointer;
 }
-.feature img{
-  height: 15rem;
-  width: 18rem;
+
+.feature img {
+  height: 20rem;
+  width: 20rem;
   padding: 0.5rem;
+  border-right: 1px solid #5cf2a5;
 }
 
 .learnMore {
-  background-color: #0A2430;
+  background-color: #3dee8c;
   color: #fff;
   padding: 100px 0;
   text-align: center;
+}
+
+.learnMore a {
+  text-decoration: none;
+  color: #064404;
+  padding: 0.3rem;
+  transition: 0.3s ease-in-out;
 }
 
 .learnMore h2 {
@@ -117,14 +130,12 @@
   background-color: #ffffff;
   padding: 80px 0;
   text-align: center;
-block-size: auto;
- height:initial;
+  block-size: auto;
+  height: initial;
 }
 
 .slideContainer {
   position: relative;
-  max-width: 1200px;
-  min-width: 1200px;
   margin: 0 auto;
 }
 
@@ -158,8 +169,98 @@ block-size: auto;
 .activeIndicator {
   background-color: #064404;
 }
-.ctaButton:hover{
-background: #0A2430;
-color: #ccc;
+
+.ctaButton:hover {
+  background: #b7fff0;
+  color: #3dee8c;
+  transition: 0.3s;
 }
-/* Adicione mais estilos e personalize conforme necessário */
+
+/* Estilos da seção "Nosso Time" e "Nosso Projeto" */
+.nossasfotos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nossasfotos img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  margin: 10px;
+}
+
+.time,
+.project h2 {
+  display: flex;
+  width: 200vh;
+  margin-left: auto;
+  color: #3dee8c;
+  padding-left: 3rem;
+  margin-top: 0.1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.time:hover {
+  transition: 1s;
+  padding-left: 0rem;
+}
+
+.nossasfotos img:hover {
+  transition: 0.3s;
+  border-right: 7px solid #99fbd7;
+  border-left: 7px solid #99fbd7;
+  border-top: 7px solid #7af7be;
+  width: max-content;
+}
+
+.nossasfotos img {
+  transition: 0.5s ease-in-out;
+}
+
+.project {
+  border-top: 1px solid rgb(0, 145, 24);
+  background: #3dee8c;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.nos {
+  margin-bottom: 3rem;
+}
+
+.project h2 {
+  margin-left: 1rem;
+  color: #ffffff;
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+
+.peixe {
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  color: #001e24;
+}
+
+.peixe img:hover {
+  color: white;
+  transition: 0.5s ease-in-out;
+  background: white;
+  padding: 1rem;
+  border-radius: 10rem;
+}
+
+.project img {
+  transition: 0.4s ease-in;
+}

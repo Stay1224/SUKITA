@@ -1,0 +1,51 @@
+/* Servicos.module.css */
+
+/* Estilos para o container de serviços */
+body{
+  background: #ffffff;
+}
+.servicosContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+ 
+  
+  .servicosContainer h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #14e08b;
+  }
+  
+  /* Estilos para cada serviço individual */
+  .servico {
+    margin: 20px;
+    color: white;
+    padding: 2rem;
+    background-color: #14e08b;
+    border: 1px solid #dddddd00;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .servico img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .servico h2 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .servico p {
+    font-size: 16px;
+   
+  }
+ .servicosContainer h1{
+    
+    transition: 1s ease-in-out;
+    
+  }

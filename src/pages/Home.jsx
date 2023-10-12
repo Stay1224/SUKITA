@@ -4,6 +4,10 @@ import styles from './Home.module.css';
 import suporte from '../Imagens/suporte.png'
 import recursos from '../Imagens/recursos.png'
 import facil2 from '../Imagens/facil2.png'
+import arthur from '../Imagens/arthur.png'
+import k from '../Imagens/K.jpg'
+import pedro from '../Imagens/pedro.png'
+import peixe from '../Imagens/peixe.png'
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
@@ -15,7 +19,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
-    }, 5000); // Altere o intervalo de troca de slides conforme necessário (5 segundos neste exemplo)
+    }, 100000); // Altere o intervalo de troca de slides conforme necessário (5 segundos neste exemplo)
 
     return () => clearInterval(interval);
   }, []);
@@ -29,7 +33,26 @@ const Home = () => {
           <a href="#saiba-mais" className={styles.ctaButton}>Saiba Mais</a>
         </div>
       </section>
+      <section className={styles.nos}>
+        <h2 className={styles.time}>Conheça nosso time </h2>
 
+        <div className={styles.nossasfotos}>
+
+          <img src={arthur} alt="Arthur" />
+          <img src={k} alt="Kelton" />
+          <img src={pedro} alt="pedro" />
+
+        </div>
+
+      </section>
+      <section className={styles.project}>
+
+        <h2>Nosso projeto</h2>
+
+        <p><span></span>Manter um aquário saudável envolve diversos fatores, incluindo a qualidade da água, a temperatura adequada e, é claro, a alimentação regular dos peixes. Muitos aquaristas enfrentam dificuldades para manter uma rotina consistente de alimentação, o que pode afetar a saúde e a felicidade dos habitantes do aquário. Além disso, as pessoas que viajam com frequência ou têm horários irregulares podem encontrar dificuldades em atender às necessidades de seus aquários.
+    <br /><div className={styles.peixe}><img src={peixe} alt="imagem de peixe" /></div><br />
+          O projeto Aquarium surge como uma solução para esses desafios. Ao automatizar o processo de alimentação e monitoramento dos parâmetros do aquário, ele busca garantir um ambiente estável e saudável para os peixes e plantas, reduzindo a carga de trabalho dos aquaristas e proporcionando maior tranquilidade para aqueles que se preocupam com seus aquários.</p>
+      </section>
       <section className={styles.features}>
         <div className={styles.feature}>
           <img
@@ -39,8 +62,12 @@ const Home = () => {
           />
           <h2>Recursos Avançados</h2>
           <p>Oferecemos uma variedade de recursos avançados para atender às suas necessidades.
-         
+
           </p>
+        </div>
+        <div>
+
+
         </div>
         <div className={styles.feature}>
           <img

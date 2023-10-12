@@ -1,0 +1,106 @@
+/* Sobre.module.css */
+
+.sobre {
+    background-color: #1b1b1b;
+    color: #ffffff;
+    padding: 4rem 0;
+  }
+  
+  .sobreContent {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px; /* Adicione margem interna nos dispositivos menores */
+  }
+  
+  
+  .sobre h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .sobre p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .missao {
+    background-color:#3dee8c;
+    color: #000000;
+    padding: 4rem 0;
+  }
+  
+  .missaoContent {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px; /* Adicione margem interna nos dispositivos menores */
+  }
+  
+  .missao h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .missao p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .slide {
+    background-color: #19b840;
+    color: #ffffff;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .slideContainer {
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .activeSlide {
+    display: block;
+  }
+  .foto{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .slide h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .slide p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsividade para dispositivos menores */
+  @media screen and (max-width: 768px) {
+    .sobreContent, .missaoContent, .slideContent {
+      padding: 0.5rem; /* Remova a margem interna nos dispositivos menores */
+
+    }
+  
+    .sobre h2, .missao h2, .slide h2 {
+      font-size: 28px; /* Reduza o tamanho do título */
+    }
+  
+    .sobre p, .missao p, .slide p {
+      font-size: 16px; /* Reduza o tamanho do texto */
+    }
+    .foto img{
+        width: 100%;
+      }
+  }
+  

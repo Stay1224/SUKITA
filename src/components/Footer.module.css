@@ -1,7 +1,7 @@
 /* Footer.module.css */
 
 .footer {
-    background-color: #0A2430;
+    background-color: #03ce5e;
     color: #fff;
     padding: 2rem 0;
   }
@@ -32,26 +32,29 @@
   
   ul li {
     margin-bottom: 8px;
+    
   }
   
   ul li a {
-    color: #fff;
+    color: #ffffff;
+    padding: 0.9rem;
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
   ul li a:hover {
-    color: #064404;
+    color: #441e04;
   }
   
   .socialLinks {
     display: flex;
     padding: 0.5rem;
-    
+   
   }
   
   .socialLinks li {
     display: flex;
+  
     align-items: center;
     padding: 0.5rem;
   }
@@ -59,9 +62,13 @@
   .socialLinks i {
     margin-right: 8px;
     
+    
   }
+  
   .socialLinks a:hover {
-  background: floralwhite;
+  background: #ffffff;
+  transition: 0.3s;
+  border-radius: 2rem;
     
   }
   
@@ -112,18 +119,19 @@
     padding: 10px;
     border: 1px solid #fff;
     border-radius: 20px 0 0 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(16, 202, 171, 0.1);
     color: #fff;
   }
   .socialIcon{
     max-width: 3rem;
+   display: flex;
   
   }
   
   .searchBar button {
-    background-color: #064404;
+    background-color: #263633;
     border: none;
-    border-radius: 0 20px 20px 0;
+   
     color: #fff;
     padding: 10px 20px;
     cursor: pointer;
