@@ -1,120 +1,92 @@
-// Home.jsx
 import React, { useState, useEffect } from 'react';
 import styles from './Home.module.css';
-import suporte from '../Imagens/suporte.png'
-import recursos from '../Imagens/recursos.png'
-import facil2 from '../Imagens/facil2.png'
-import arthur from '../Imagens/arthur.png'
-import k from '../Imagens/K.jpg'
-import pedro from '../Imagens/pedro.png'
-import peixe from '../Imagens/peixe.png'
+import K from '../Imagens/K.png';
+import Arthur from '../Imagens/Arthur.png';
+import pedro from '../Imagens/Pedro.png';
+
 const Home = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [
-    'https://th.bing.com/th/id/R.8b2c811c15dda675e8dc3309ef77e51c?rik=Hm5260u1%2f6jgcw&riu=http%3a%2f%2fwww.lingzhilab.com%2flzbbs%2farduino%2fimg%2fArduino-UNO-R3%2fArduino-UNO-R3-img1.jpg&ehk=Ad42L25A9AyVZO3aweZy47vHaldweR2r%2bI3Arp5Vrlo%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1', // Substitua com o URL da sua imagem
-    'https://www.iottechtrends.com/assets/uploads/2019/04/Arduino-Uno-Components.jpg', // Substitua com o URL da sua imagem
-    'https://th.bing.com/th/id/OIP._LUXY3wulbRU7sLP7UfV9QHaHa?pid=ImgDet&rs=1', // Substitua com o URL da sua imagem
-  ];
+  const [images, setImages] = useState([pedro, Arthur, K]);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
-    }, 100000); // Altere o intervalo de troca de slides conforme necessário (5 segundos neste exemplo)
+    const sections = document.querySelectorAll(`.${styles.tccExplanation}`);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.show);
+          } else {
+            entry.target.classList.remove(styles.show);
+          }
+        });
+      },
+      { threshold: 0.5 } // Percentage of section in view to trigger changes
+    );
 
-    return () => clearInterval(interval);
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
   }, []);
 
+  const handleCarousel = () => {
+    setDarkMode(!darkMode);
+    const firstImage = images.shift();
+    images.push(firstImage);
+    setImages([...images]);
+  };
+
   return (
-    <div className={styles.home}>
+    <div className={`${styles.home} ${darkMode ? styles.darkMode : ''}`}>
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1>Bem-vindo ao Aquarium</h1>
-          <p>Automatizando para e por você.</p>
-          <a href="#saiba-mais" className={styles.ctaButton}>Saiba Mais</a>
+          <h1>Suquitos</h1>
+          <p>Concluindo mais uma etapa da vida com a felicidade de ter o Suquitos com você.</p>
+          <button onClick={handleCarousel} className={styles.ctaButton}>
+            Veja quem somos!
+          </button>
         </div>
-      </section>
-      <section className={styles.nos}>
-        <h2 className={styles.time}>Conheça nosso time </h2>
-
-        <div className={styles.nossasfotos}>
-
-          <img src={arthur} alt="Arthur" />
-          <img src={k} alt="Kelton" />
-          <img src={pedro} alt="pedro" />
-
-        </div>
-
-      </section>
-      <section className={styles.project}>
-
-        <h2>Nosso projeto</h2>
-
-        <p><span></span>Manter um aquário saudável envolve diversos fatores, incluindo a qualidade da água, a temperatura adequada e, é claro, a alimentação regular dos peixes. Muitos aquaristas enfrentam dificuldades para manter uma rotina consistente de alimentação, o que pode afetar a saúde e a felicidade dos habitantes do aquário. Além disso, as pessoas que viajam com frequência ou têm horários irregulares podem encontrar dificuldades em atender às necessidades de seus aquários.
-    <br /><div className={styles.peixe}><img src={peixe} alt="imagem de peixe" /></div><br />
-          O projeto Aquarium surge como uma solução para esses desafios. Ao automatizar o processo de alimentação e monitoramento dos parâmetros do aquário, ele busca garantir um ambiente estável e saudável para os peixes e plantas, reduzindo a carga de trabalho dos aquaristas e proporcionando maior tranquilidade para aqueles que se preocupam com seus aquários.</p>
-      </section>
-      <section className={styles.features}>
-        <div className={styles.feature}>
-          <img
-            src={recursos}
-            alt="Feature 1"
-            className={styles.featureImage}
-          />
-          <h2>Recursos Avançados</h2>
-          <p>Oferecemos uma variedade de recursos avançados para atender às suas necessidades.
-
-          </p>
-        </div>
-        <div>
-
-
-        </div>
-        <div className={styles.feature}>
-          <img
-            src={suporte}
-            alt="feature 2"
-            className={styles.featureImage}
-          />
-          <h2>Suporte 24/7</h2>
-          <p>Nossa equipe de suporte está disponível 24 horas por dia, 7 dias por semana.</p>
-        </div>
-        <div className={styles.feature}>
-          <img
-            src={facil2}
-            alt="Feature 3"
-            className={styles.featureImage}
-          />
-          <h2>Fácil de Usar</h2>
-          <p>Nossa plataforma é intuitiva e fácil de usar, mesmo para iniciantes.</p>
-        </div>
-      </section>
-
-      <section id="saiba-mais" className={styles.learnMore}>
-        <h2>Saiba Mais Sobre Nós</h2>
-        <p>Descubra como o Aquarium pode ajudar você a automatizar e simplificar suas tarefas diárias.</p>
-        <a href="/sobre" className={styles.ctaButton}>Sobre Nós</a>
-      </section>
-
-      <section className={styles.imageSlider}>
-        <div className={styles.slideContainer}>
-          {slides.map((slide, index) => (
-            <div
+        <div className={styles.carousel}>
+          {images.map((image, index) => (
+            <img
               key={index}
-              className={`${styles.slide} ${index === currentSlide ? styles.activeSlide : ''}`}
-            >
-              <img src={slide} alt={`Slide ${index + 1}`} className={styles.slideImage} />
-            </div>
+              src={image}
+              alt={`Imagem ${index + 1}`}
+              className={`${styles.imageTransition} ${styles.centerImage}`}
+            />
           ))}
         </div>
-        <div className={styles.slideIndicators}>
-          {slides.map((_, index) => (
-            <div
-              key={index}
-              className={`${styles.indicator} ${index === currentSlide ? styles.activeIndicator : ''}`}
-              onClick={() => setCurrentSlide(index)}
-            ></div>
-          ))}
-        </div>
+      </section>
+      <section className={`${styles.tccExplanation}`}>
+        <h2>O que é o nosso TCC?</h2>
+        <img src="https://th.bing.com/th/id/OIP.Cy4SMThjodA5uqrw6XUVugHaGh?pid=ImgDet&rs=1" alt="" />
+        <p>
+          Vamos fazer uma máquina de refrigerante com moedeira e tela sobre as bebidas que irá colocar no copo. Esses copos irão
+          ficar ao lado da máquina, quando o dinheiro inserido na máquina o devido copo será liberado com o microservo fazendo a
+          abertura para o copo cair para colocar a bebida.
+        </p>
+      </section>
+      <section className={`${styles.tccExplanation}`}>
+        <h2>COMPONENTES</h2>
+        <img src="https://www.usinainfo.com.br/1017396-thickbox_default/mini-bomba-de-agua-para-arduino-12v-rs385-2lmin.jpg" alt="" />
+        <p>
+          Uma bomba de água controlada por Arduino é um dispositivo que utiliza a placa Arduino como seu controlador principal.
+          Essas bombas são componentes essenciais em diversos projetos, desde sistemas de irrigação automatizados até soluções de
+          resfriamento e controle de fluidos.
+        </p>
+        <hr />
+        <br />
+        <img src="https://www.okystar.com/wp-content/uploads/2017/08/OKY4005-3-LCD-1602-Module-blue-light-2.jpg" alt="" />
+        <br />
+        <img src="https://th.bing.com/th/id/R.ae031efbe561d7bceec0086241f40728?rik=pHYmyqb%2fweuJbw&pid=ImgRaw&r=0" alt="" />
+        <br />
+        <hr />
+        <br />
       </section>
     </div>
   );

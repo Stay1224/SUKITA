@@ -9,14 +9,9 @@ function Sobre() {
         <div className={style.sobreContent}>
           <h2>Nossa História</h2>
           <p>
-            Bem-vindo à jornada do Aquarium, onde a paixão por aquários encontra a inovação tecnológica. Nossa história começa com a admiração pela beleza dos aquários e o desejo de tornar a manutenção de aquários mais fácil e eficiente.
+          O objetivo principal deste projeto é desenvolver uma máquina automatizada para distribuição de bebidas que seja de fácil acesso e utilização. O dispositivo terá como principal característica a simplicidade, permitindo que o usuário solicite sua bebida preferida com um único botão. Esta solução inovadora visa a oferecer comodidade e eficiência na distribuição de uma variedade de bebidas em diversos ambientes, como escritórios, espaços de convivência, e eventos, proporcionando uma experiência agradável aos usuários.
           </p>
-          <p>
-            Com o Aquarium, estamos redefinindo a maneira como os aquaristas cuidam de seus ecossistemas aquáticos. Nossa missão é proporcionar uma experiência aquática excepcional, onde você pode se concentrar na beleza do seu aquário, enquanto nós cuidamos do resto.
-          </p>
-          <p>
-            A equipe do Aquarium é composta por apaixonados por aquários, engenheiros e designers dedicados a criar soluções inovadoras para os desafios da manutenção de aquários. Junte-se a nós nesta jornada e explore o futuro emocionante do cuidado com aquários.
-          </p>
+         
         </div>
       </section>
 
@@ -24,10 +19,9 @@ function Sobre() {
         <div className={style.missaoContent}>
           <h2>Nossa Missão</h2>
           <p>
-            Nossa missão é tornar a manutenção de aquários mais fácil e acessível para todos os entusiastas. Queremos criar uma comunidade de aquaristas felizes e aquários saudáveis.
-          </p>
+          O objetivo primordial deste projeto é não apenas oferecer uma solução prática e eficaz na distribuição de bebidas, mas também transformar a experiência do consumidor. Ao eliminar etapas complexas e demoradas, a máquina automatizada simplificará o processo de seleção, garantindo a oferta rápida e fácil de bebidas com alta qualidade, resultando em satisfação para o consumidor.</p>
           <p>
-            Com a ajuda da tecnologia, estamos construindo um futuro em que a paixão por aquários não conhece limites. Junte-se a nós nesta missão e experimente a magia do Aquarium.
+            Com a ajuda da tecnologia, estamos construindo um futuro em que a paixão por aquários não conhece limites. Junte-se a nós nesta missão.
           </p>
         </div>
       </section>
@@ -36,11 +30,11 @@ function Sobre() {
         <div className={style.sobreContent}>
           <h2>Nossa Visão</h2>
           <p>
-            Enxergamos um mundo em que todos possam desfrutar da beleza e tranquilidade de um aquário deslumbrante, sem se preocupar com a manutenção complexa.
+            Enxergamos um mundo em que todos possam desfrutar da beleza e tranquilidade utilizando de recursos acessiveis como o nosso.
           </p>
-          <div className={style.foto}><img src={alvo} alt="montanha com um alvo na frente" /></div>
+       
           <p>
-            Com a Aquarium, queremos tornar a experiência de possuir um aquário uma alegria ininterrupta, onde cada detalhe é cuidado com perfeição, e nossos clientes podem se dedicar à admiração de suas criações aquáticas.
+            Com o Sukita, idependente da hora ou momento, voce conseguira tomar e desfrutar de um dia estressante o prazer.
           </p>
         </div>
       </section>

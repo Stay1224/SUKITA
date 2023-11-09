@@ -39,21 +39,10 @@ const Footer = () => {
 
         <div className={styles.section}>
           <h2>Contate-nos</h2>
-          <p>Inscreva-se para receber nossas atualizações.</p>
-          <form className={styles.newsletterForm}>
-            <input type="email" placeholder="Seu Email" />
-            <button>Inscrever</button>
-          </form>
+        
         </div>
       </div>
 
-      <div className={styles.searchBar}>
-        <h2>Pesquisa Rápida</h2>
-        <form>
-          <input type="text" placeholder="Pesquisar..." />
-          <button><i className="fas fa-search"></i></button>
-        </form>
-      </div>
     </footer>
   );
 };

@@ -15,7 +15,9 @@ body{
   .servicosContainer h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #14e08b;
+    color: #0b5a5a;
+    text-align: justify;
+    text-align: center;
   }
   
   /* Estilos para cada serviço individual */
@@ -23,7 +25,7 @@ body{
     margin: 20px;
     color: white;
     padding: 2rem;
-    background-color: #14e08b;
+    background-color: #3b1949;
     border: 1px solid #dddddd00;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
