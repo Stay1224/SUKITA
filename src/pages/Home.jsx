@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Home.module.css';
 import K from '../Imagens/K.png';
 import arthur from '../Imagens/arthur.png';
-import pedro from '../Imagens/Pedro.png';
+import pedro from '../Imagens/pedro.png';
 
 const Home = () => {
   const [images, setImages] = useState([pedro, arthur, K]);
